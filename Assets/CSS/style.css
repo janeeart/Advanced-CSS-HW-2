@@ -11,13 +11,15 @@ header {
     background-color: black;
     color: white;
     font-family: sans-serif;
-    padding: 20px;
+    padding: 40px;
 }
+
 .header-container {
     float:left
 }
 .name {
     display: inline;
+    font-size: 30px;
 }
 .menu {
     float: right;
@@ -30,7 +32,7 @@ header {
 }
 
 .menu li {
-    display: inline-block;
+    display: inline;
     padding: 0 20px;
 }
 
@@ -49,8 +51,12 @@ aside {
     padding: 100px;
 }
 
+.My-image {
+    height: 300px;
+    width: 500px;
+}
+
 .about-me-title {
-    /* padding: 20px; */
     padding-right: 2px;
     border-right: 5px;
     border-right-style: solid;
@@ -58,7 +64,33 @@ aside {
 
 .about-me-title p {
     font-size: 40px;
+    padding-top: 200px;
     padding-right: 20px;
+    padding-bottom: 200px;
+    margin: 5px;
+    text-align: right;
+
+
+    animation-name: moveFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.about-me-title p:hover {
+    color: lightsalmon;
+}
+
+.work-title {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-right: 20px;
+    border-right: 5px;
+    border-right-style: solid;
+
+}
+
+.work-title p {
+    font-size: 40px;
     margin: 0;
     text-align: right;
 
@@ -67,9 +99,45 @@ aside {
     animation-timing-function: ease-out;
 }
 
-.about-me-title p:hover {
-    color: blue;
+.work-title p:hover {
+    color: lightsalmon;
 }
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+.contact-title {
+    padding-right: 2px;
+    border-right: 5px;
+    border-right-style: solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contact-title p {
+    font-size: 40px;
+    padding-right: 7px;
+    margin: 5px;
+    text-align: right;
+
+    animation-name: moveFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.contact-title p:hover {
+    color: lightsalmon;
+}
+
 @keyframes moveFromLeft {
     0% {
         opacity: 0;
@@ -80,12 +148,6 @@ aside {
         transform: translateX(0);
     }
 }
-.work-title {
-    padding: 100px;
-    border-right: 5px;
-    border-right-style: solid;
-}
-
 .contact-title {
     padding: 20px;
     border-right: 5px;
@@ -101,7 +163,7 @@ aside {
 .about-me-content {
     font-family: sans-serif;
     width: 700px;
-    height: 100px;
+    height: 500px;
     padding-top: 100px;
     border-radius: 2%;
     border-style: none;
@@ -110,17 +172,32 @@ aside {
 .work-content {
         font-family: sans-serif;
         width: 700px;
-        height: 275px;
-        padding: 5px;
+        height: 400px;
         border-radius: 2%;
         border-style: none;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex-basis: 100%;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .column {
+      flex: 1;
+    }
+  }
 
 .contact-content {
     font-family: sans-serif;
     width: 700px;
     height: 100px;
-    padding: 5px;
+    padding-top: 100px;
     border-radius: 2%;
     border-style: none;
 }
@@ -133,20 +210,21 @@ aside {
 
 .contact-content li {
     display: inline-block;
-    padding: 0 20px;
 }
 
 .contact-content a {
     color: lightseagreen;
     font-size: 14px;
     font-weight: bold;
+    padding: 20px;
 }
 
 footer {
     background-color: black;
     padding-top: 3px; 
-    position: absolute;
+    position: fixed;
     height: 20px;
+    margin-top: 100px;
     margin-bottom: 0;
     bottom: 0;
     width: 100%;
