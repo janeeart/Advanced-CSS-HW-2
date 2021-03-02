@@ -29,6 +29,7 @@ header {
     list-style: none;
     margin: 2px;
     padding: 0;
+    display: flex;
 }
 
 .menu li {
@@ -44,11 +45,13 @@ header {
     font-weight: bold;
 }
 
-aside {
+.sidebar {
     font-family: sans-serif;
     float: left;
     grid-area: sidebar;
     padding: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .My-image {
@@ -81,12 +84,12 @@ aside {
 }
 
 .work-title {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 300px;
+    padding-bottom: 300px;
     padding-right: 20px;
     border-right: 5px;
     border-right-style: solid;
-
+    margin-top: 5px;
 }
 
 .work-title p {
@@ -102,18 +105,6 @@ aside {
 .work-title p:hover {
     color: lightsalmon;
 }
-
-.grid-container {
-    display: grid;
-}
-
-.grid-item {
-    background-color: white;
-    border: 1px solid black;
-    padding: 20px;
-    font-size: 10px;
-    text-align: center;
-  }
 
 .contact-title {
     padding-right: 2px;
@@ -149,7 +140,9 @@ aside {
     }
 }
 .contact-title {
-    padding: 20px;
+    padding-top: 50px; 
+    padding-right: 20px;
+    padding-bottom: 50px;
     border-right: 5px;
     border-right-style: solid;
 }
@@ -162,7 +155,7 @@ aside {
 
 .about-me-content {
     font-family: sans-serif;
-    width: 700px;
+    width: 500px;
     height: 500px;
     padding-top: 100px;
     border-radius: 2%;
@@ -172,32 +165,61 @@ aside {
 .work-content {
         font-family: sans-serif;
         width: 700px;
-        height: 400px;
+        height: 500px;
         border-radius: 2%;
         border-style: none;
+        padding-bottom: 100px;
+}
+
+.Project-1 {
+    height: 300px;
+    width: 600px;
+}
+
+.Small-projects {
+    height: 150px;
+    width: 300px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.container-1 {
+    position: relative;
+    font-family: sans-serif;
   }
   
-  .column {
-    flex-basis: 100%;
+  .text-block-1 {
+    position: absolute;
+    bottom: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.container {
+    position: relative;
+    font-family: sans-serif;
   }
   
-  @media screen and (min-width: 800px) {
-    .column {
-      flex: 1;
-    }
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
 .contact-content {
     font-family: sans-serif;
-    width: 700px;
+    width: 800px;
     height: 100px;
-    padding-top: 100px;
+    padding-top: 150px;
     border-radius: 2%;
     border-style: none;
 }
@@ -228,4 +250,17 @@ footer {
     margin-bottom: 0;
     bottom: 0;
     width: 100%;
+}
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .row {
+    flex-direction: column;
+    }
+}
+
+/* Large devices*/
+@media only screen and (min-width: 800px) {
+    .row {
+        flex-direction: row;
+    }
 }
