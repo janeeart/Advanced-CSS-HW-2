@@ -57,8 +57,8 @@ header {
 }
 
 .My-image {
-    height: 300px;
-    width: 500px;
+    height: 500px;
+    width: 350px;
 }
 
 /*side bar titles*/
@@ -159,9 +159,9 @@ header {
     flex-wrap: wrap;
 }
 
-.about-me-content {
+#about-me-content {
     font-family: sans-serif;
-    width: 500px;
+    width: 600px;
     height: 500px;
     padding-top: 100px;
     border-radius: 2%;
@@ -191,6 +191,10 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.about-me-bio {
+    position: relative;
 }
 
 .container-1 {
