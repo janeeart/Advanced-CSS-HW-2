@@ -1,4 +1,4 @@
-Janee-Artis-Portfolio (Advanced-CSS-HW-2)
+# Janee-Artis-Portfolio (Advanced-CSS-HW-2)
 
 This is a web application built without starter code that acts as a professional web development portfolio. The purpose of this web application is to showcase deployed web projects for prospective employers.
 
